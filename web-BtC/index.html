@@ -12,8 +12,11 @@
 <body>
     <div class="sect1">
         <h1>Web-BtC</h1>
-        <button id="requestPortButton">
-            Connect to HC05
+        <button id="reCon">
+            Connect HC05
+        </button>
+        <button id="disCon">
+            Disconnect HC05
         </button>
         <ul class="control-container">
             <li><span>Device 1</span><button id="btn1">Off</button></li>
@@ -27,159 +30,7 @@
         </ul>
     </div>
     <div id="logs"></div>
-    <script>
-        var port, writer;
-        var is1on, is2on, is3on, is4on, is5on, is6on, is7on, is8on;
-        navigator.serial.getPorts().then((ports) => {
-            for (const port of ports)
-                log(`Got serial port. Connected: ${port.connected}`);
-        });
-
-        requestPortButton.onclick = async () => {
-            port = await navigator.serial.requestPort();
-            if (port.connected == true) {
-                writer = port.writable.getWriter();
-                log(`Connection: Success: ${port.connected}`);
-                setAllBtnFalse();
-            } else {
-                log(`Connection: Failed: ${port.connected}`);
-            }
-        };
-
-        btn1.onclick = async () => {
-            switch (is1on) {
-                case true:
-                    sendByte(97);
-                    setBtnState(btn1, false, is1on);
-                    break;
-                case false:
-                    sendByte(65);
-                    setBtnState(btn1, true, is1on);
-                    break;
-            }
-        };
-        btn2.onclick = async () => {
-            switch (is2on) {
-                case true:
-                    sendByte(98);
-                    setBtnState(btn2, false, is2on);
-                    break;
-                case false:
-                    sendByte(66);
-                    setBtnState(btn2, true, is2on);
-                    break;
-            }
-        };
-        btn3.onclick = async () => {
-            switch (is3on) {
-                case true:
-                    sendByte(99);
-                    setBtnState(btn3, false, is3on);
-                    break;
-                case false:
-                    sendByte(67);
-                    setBtnState(btn3, true, is3on);
-                    break;
-            }
-        };
-        btn4.onclick = async () => {
-            switch (is4on) {
-                case true:
-                    sendByte(100);
-                    setBtnState(btn4, false, is4on);
-                    break;
-                case false:
-                    sendByte(68);
-                    setBtnState(btn4, true, is4on);
-                    break;
-            }
-        };
-        btn5.onclick = async () => {
-            switch (is5on) {
-                case true:
-                    sendByte(101);
-                    setBtnState(btn5, false, is5on);
-                    break;
-                case false:
-                    sendByte(69);
-                    setBtnState(btn5, true, is5on);
-                    break;
-            }
-        };
-        btn6.onclick = async () => {
-            switch (is6on) {
-                case true:
-                    sendByte(102);
-                    setBtnState(btn6, false, is6on);
-                    break;
-                case false:
-                    sendByte(70);
-                    setBtnState(btn6, true, is6on);
-                    break;
-            }
-        };
-        btn7.onclick = async () => {
-            switch (is7on) {
-                case true:
-                    sendByte(103);
-                    setBtnState(btn7, false, is7on);
-                    break;
-                case false:
-                    sendByte(71);
-                    setBtnState(btn7, true, is7on);
-                    break;
-            }
-        };
-        btn8.onclick = async () => {
-            switch (is8on) {
-                case true:
-                    sendByte(104);
-                    setBtnState(btn8, false, is8on);
-                    break;
-                case false:
-                    sendByte(72);
-                    setBtnState(btn8, true, is8on);
-                    break;
-            }
-        };
-
-        function setAllBtnFalse() {
-            is1on = false;
-            is2on = false;
-            is3on = false;
-            is4on = false;
-            is5on = false;
-            is6on = false;
-            is7on = false;
-            is8on = false;
-        }
-
-        function log(text) {
-            logs.innerHTML += `${text}\r\n`;
-        }
-
-        function setBtnState(button, state, btnbool) {
-            var btnText;
-            switch (state) {
-                case true:
-                    btnText = "On";
-                    break;
-                case false:
-                    btnText = "Off";
-                    break;
-            }
-            btnbool = state;
-            button.innerHTML = btnText;
-        };
-
-        async function sendByte(byte) {
-            if (writer != port.writable.getWriter()) {
-                writer = port.writable.getWriter();
-            }
-            await writer.write(byte);
-        };
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
