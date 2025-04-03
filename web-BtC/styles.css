@@ -1,0 +1,56 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+}
+
+h1 {
+    margin-block-end: 0;
+}
+
+a {
+    display: block;
+    margin-block-end: 1.4em;
+}
+
+#logs {
+    margin-top: 1em;
+    white-space: pre-wrap;
+}
+
+.control-container {
+    padding: 5px;
+    list-style: none;
+}
+
+.control-container li {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+.control-container span {
+    margin-right: 50px;
+}
+
+.control-container button {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.sect1 {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.logs {
+    display: block;
+    width: 50%;
+    float: right;
+}
