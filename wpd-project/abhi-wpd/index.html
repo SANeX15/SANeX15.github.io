@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20Bites | Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <h1 class="logo">20Bites</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+        <div class="mode-toggle" onclick="toggleMode()">🌙</div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to 20Bites</h2>
+        <p>Where flavor meets comfort.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+
+        <h3>Starters</h3>
+        <div class="menu-items">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1604909053208-e6c2f6bc6087?auto=format&fit=crop&w=500&q=80"
+                    alt="Garlic Bread" />
+                <h4>Garlic Bread</h4>
+                <p>Toasted bread with garlic & herbs</p>
+                <span>$5</span>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1635321998787-5b83c3fd51b3?auto=format&fit=crop&w=500&q=80"
+                    alt="Bruschetta" />
+                <h4>Bruschetta</h4>
+                <p>Grilled bread with tomato & basil</p>
+                <span>$6</span>
+            </div>
+        </div>
+
+        <h3>Main Course</h3>
+        <div class="menu-items">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1601924579993-bf14bc3a8219?auto=format&fit=crop&w=500&q=80"
+                    alt="Pizza" />
+                <h4>Margherita Pizza</h4>
+                <p>Fresh basil, tomato & mozzarella</p>
+                <span>$10</span>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=500&q=80"
+                    alt="Spaghetti" />
+                <h4>Spaghetti Bolognese</h4>
+                <p>Classic Italian meat sauce</p>
+                <span>$12</span>
+            </div>
+        </div>
+
+        <h3>Desserts</h3>
+        <div class="menu-items">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1590080876633-52cbd9f2b26a?auto=format&fit=crop&w=500&q=80"
+                    alt="Cheesecake" />
+                <h4>Cheesecake</h4>
+                <p>Creamy New York-style cheesecake</p>
+                <span>$7</span>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1586816001966-79b8b115a5c4?auto=format&fit=crop&w=500&q=80"
+                    alt="Brownie" />
+                <h4>Chocolate Brownie</h4>
+                <p>Rich and gooey with a scoop of ice cream</p>
+                <span>$6</span>
+            </div>
+        </div>
+
+        <h3>Drinks</h3>
+        <div class="menu-items">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c30?auto=format&fit=crop&w=500&q=80"
+                    alt="Lemonade" />
+                <h4>Fresh Lemonade</h4>
+                <p>Cool & refreshing</p>
+                <span>$3</span>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1571079931235-d2d4a06d1705?auto=format&fit=crop&w=500&q=80"
+                    alt="Iced Tea" />
+                <h4>Iced Tea</h4>
+                <p>Chilled tea with lemon twist</p>
+                <span>$3</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+        <h2>Reserve a Table</h2>
+        <form>
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="date" required />
+            <input type="time" required />
+            <input type="number" placeholder="Guests" required min="1" />
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <h2>What Our Customers Say</h2>
+        <div class="review-cards">
+            <div class="review-card">
+                <p>“Absolutely delicious! The pizza was fresh and full of flavor.”</p>
+                <h4>– Priya S.</h4>
+            </div>
+            <div class="review-card">
+                <p>“Lovely ambiance and excellent service. Will visit again!”</p>
+                <h4>– Rahul M.</h4>
+            </div>
+            <div class="review-card">
+                <p>“The dessert was heavenly. Cheesecake is a must-try.”</p>
+                <h4>– Ayesha K.</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 20Bites. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
