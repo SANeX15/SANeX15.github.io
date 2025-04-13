@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #2c2c2c;
+    --topbar-color: #1c1c1c;
+    --sidebar-color: #1f1f1f;
+    --panel-color: #2a2a2a;
+    --text-color: #ffffff;
+    --canvas-bg: #3a3a3a;
+    --canvas-text: #000000;
+}
+
+body.light-mode {
+    --bg-color: #f5f5f5;
+    --topbar-color: #e0e0e0;
+    --sidebar-color: #dddddd;
+    --panel-color: #ffffff;
+    --text-color: #000000;
+    --canvas-bg: #ffffff;
+    --canvas-text: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.topbar {
+    display: flex;
+    background-color: var(--topbar-color);
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    align-items: center;
+}
+
+.menu,
+.toggle-mode {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.toggle-mode {
+    margin-left: auto;
+}
+
+.main {
+    display: flex;
+    height: calc(100vh - 40px);
+}
+
+.sidebar-left {
+    width: 60px;
+    background-color: var(--sidebar-color);
+    padding: 10px;
+    border-right: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool {
+    margin: 15px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.canvas-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--canvas-bg);
+}
+
+.canvas-placeholder {
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    color: var(--canvas-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+.sidebar-right {
+    width: 200px;
+    background-color: var(--sidebar-color);
+    padding: 10px;
+    border-left: 1px solid #444;
+}
+
+.panel {
+    background-color: var(--panel-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.layer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.thumb {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 4px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photoshop Style UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="menu">File</div>
+        <div class="menu">Edit</div>
+        <div class="menu">Image</div>
+        <div class="menu">Layer</div>
+        <div class="menu">Select</div>
+        <div class="menu">View</div>
+        <div class="menu">Window</div>
+        <div class="menu">Help</div>
+        <div class="toggle-mode" onclick="toggleMode()">🌙</div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar-left">
+            <div class="tool">🖉</div>
+            <div class="tool">✂</div>
+            <div class="tool">✎</div>
+            <div class="tool">🖌</div>
+            <div class="tool">🔲</div>
+            <div class="tool">🖍</div>
+            <div class="tool">🧽</div>
+            <div class="tool">✏️</div>
+            <div class="tool">🅰</div>
+            <div class="tool">📐</div>
+            <div class="tool">🧲</div>
+        </div>
+
+        <div class="canvas-area">
+            <div class="canvas-placeholder">Canvas Area</div>
+        </div>
+
+        <div class="sidebar-right">
+            <div class="panel">
+                <h4>Layers</h4>
+                <ul class="layer-list">
+                    <li class="layer-item">
+                        <img src="https://via.placeholder.com/40" class="thumb" />
+                        <span>Background</span>
+                    </li>
+                    <li class="layer-item">
+                        <img src="https://via.placeholder.com/40/888888/ffffff?text=L1" class="thumb" />
+                        <span>Layer 1</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h4>Properties</h4>
+                <p>Width: 800px</p>
+                <p>Height: 600px</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
