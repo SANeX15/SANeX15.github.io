@@ -3,36 +3,43 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web-BtC</title>
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="BtC.ico">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="sect1">
-        <h1>Web-BtC</h1>
-        <div class="button-container">
-            <button id="reCon">
-                Connect HC05
-            </button>
-            <button id="disCon">
-                Disconnect HC05
-            </button>
-        </div>
-        <ul class="control-container">
-            <li><span>Device 1</span><button id="btn1">Off</button></li>
-            <li><span>Device 2</span><button id="btn2">Off</button></li>
-            <li><span>Device 3</span><button id="btn3">Off</button></li>
-            <li><span>Device 4</span><button id="btn4">Off</button></li>
-            <li><span>Device 5</span><button id="btn5">Off</button></li>
-            <li><span>Device 6</span><button id="btn6">Off</button></li>
-            <li><span>Device 7</span><button id="btn7">Off</button></li>
-            <li><span>Device 8</span><button id="btn8">Off</button></li>
-        </ul>
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider round"></span>
+        </label>
     </div>
-    <div id="logs"></div>
+
+    <div class="container">
+        <section class="controls">
+            <h1>Web-BtC</h1>
+
+            <ul class="control-grid">
+                <li><span>Device 1</span><button id="btn1">Off</button></li>
+                <li><span>Device 2</span><button id="btn2">Off</button></li>
+                <li><span>Device 3</span><button id="btn3">Off</button></li>
+                <li><span>Device 4</span><button id="btn4">Off</button></li>
+                <li><span>Device 5</span><button id="btn5">Off</button></li>
+                <li><span>Device 6</span><button id="btn6">Off</button></li>
+                <li><span>Device 7</span><button id="btn7">Off</button></li>
+                <li><span>Device 8</span><button id="btn8">Off</button></li>
+            </ul>
+
+            <div class="button-container bottom-buttons">
+                <button id="reCon">Connect</button>
+                <button id="disCon">Disconnect</button>
+            </div>
+        </section>
+
+        <section id="logs" class="logs-panel"></section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
